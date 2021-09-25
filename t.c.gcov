@@ -1,0 +1,25 @@
+        -:    0:Source:t.c
+        -:    0:Graph:t.gcno
+        -:    0:Data:t.gcda
+        -:    0:Runs:2
+        -:    1:#include <stdio.h>
+        -:    2:#include <string.h>
+        -:    3:#include <errno.h>
+        -:    4:
+        2:    5:int main(int argc, char const *argv[])
+        -:    6:{
+        -:    7:   
+        2:    8:    FILE *fp = fopen(argv[1], "r");    
+        -:    9:
+        2:   10:    if (fp == NULL)
+        -:   11:    {
+        1:   12:        printf("%s: %s\n", argv[0], strerror(errno));
+        -:   13:    }
+        -:   14:    else
+        -:   15:    {
+        1:   16:        printf("%s: %s\n", argv[0], strerror(errno));
+        -:   17:    }
+        -:   18:
+        2:   19:    fclose(fp);
+        2:   20:    return 0;
+        -:   21:}
